@@ -18,9 +18,9 @@ if __name__ == "__main__":
     #     use_gpu=True
     # )
 
-    document = LlamaParse(result_type="markdown").load_data("data/Renswick_Delvar_Data_Scientist.pdf")
+    document = LlamaParse(result_type="markdown").load_data("data/sample-pdf.pdf")
     for i, doc in enumerate(document):
         print(f"\n--- Document Chunk {i+1} ---\n")
-        print(doc.text[:1000])
+        print(doc.text)
 
     print("done")
