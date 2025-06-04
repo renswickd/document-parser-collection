@@ -1,5 +1,8 @@
 llama-index
 llama-parse
 mistralai
-dotenv
+python-dotenv
 ipykernel # if using Jupyter
+openai 
+azure-ai-documentintelligence 
+azure-identity
