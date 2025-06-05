@@ -6,3 +6,4 @@ ipykernel # if using Jupyter
 openai 
 azure-ai-documentintelligence 
 azure-identity
+azure-storage-blob
