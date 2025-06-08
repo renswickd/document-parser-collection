@@ -21,7 +21,7 @@ def get_url_from_blob():
     return url
 
 
-def analyze_layout_from_url():
+def main():
     
     load_dotenv()
 
@@ -43,9 +43,13 @@ def analyze_layout_from_url():
     for page in result.pages:
         print(f"----Analyzing layout from page #{page.page_number}----")
 
+        output = []
         # Analyze lines
         if page.lines:
             for line_idx, line in enumerate(page.lines):
                 print(
                     f"Line #{line_idx} has text content '{line.content}'"
                 )
+                output.append(line.content)
+
+    return output
