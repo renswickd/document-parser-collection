@@ -12,7 +12,7 @@ def get_url_from_blob():
     connection_string = os.environ["AZURE_STORAGE_CONNECTION_STRING"]
     container_name = os.environ["AZURE_STORAGE_CONTAINER_NAME"]
     blob_name = os.environ["AZURE_STORAGE_BLOB_NAME"]
-    
+
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     container_client = blob_service_client.get_container_client(container_name)
     blob_client = container_client.get_blob_client(blob_name)
@@ -47,24 +47,5 @@ def analyze_layout_from_url():
         if page.lines:
             for line_idx, line in enumerate(page.lines):
                 print(
-                    f"...Line #{line_idx} has text content '{line.content}'"
-                )
-
-        # Analyze selection marks
-        if page.selection_marks:
-            for selection_mark in page.selection_marks:
-                print(
-                    f"...Selection mark is '{selection_mark.state}' "
-                    f"and has a confidence of {selection_mark.confidence}"
-                )
-
-    # Analyze tables
-    if result.tables:
-        for table_idx, table in enumerate(result.tables):
-            print(
-                f"Table #{table_idx} has {table.row_count} rows and {table.column_count} columns"
-            )
-            for cell in table.cells:
-                print(
-                    f"...Cell[{cell.row_index}][{cell.column_index}] has content '{cell.content}'"
+                    f"Line #{line_idx} has text content '{line.content}'"
                 )
