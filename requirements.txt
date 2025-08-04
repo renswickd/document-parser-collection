@@ -7,3 +7,5 @@ openai
 azure-ai-documentintelligence 
 azure-identity
 azure-storage-blob
+boto3
+langchain-community
