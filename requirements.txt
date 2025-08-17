@@ -9,3 +9,4 @@ azure-identity
 azure-storage-blob
 boto3
 langchain-community
+langchain-unstructured
